@@ -3,6 +3,7 @@ import subscript from '../../transforms/subscript';
 import blackletter from '../../transforms/blackletter';
 import blackletterBold from '../../transforms/blackletterBold';
 import serifItalic from '../../transforms/serifItalic';
+import serifBoldItalic from '../../transforms/serifBoldItalic';
 import spongebob from '../../transforms/spongebob';
 
 const details = document.querySelector('.about');
@@ -23,6 +24,7 @@ const MODES = [
   blackletter,
   blackletterBold,
   serifItalic,
+  serifBoldItalic,
   spongebob,
 ];
 const state = {

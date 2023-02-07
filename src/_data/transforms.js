@@ -5,5 +5,6 @@ module.exports = [
   'Blackletter',
   'Blackletter Bold',
   'Serif Italic',
+  'Serif Bold Italic',
   'Spongebob',
 ];
