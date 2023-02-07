@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "concurrently 'sass --watch ./src/scss:./dist/css' 'rollup ./src/js/index.js --file ./dist/js/index.js --format iife --watch' 'npx @11ty/eleventy --serve'"
+    "start": "concurrently 'sass --watch ./src/scss:./dist/css' 'rollup ./src/js/index.js --file ./dist/js/index.js --format iife --watch' 'npx @11ty/eleventy --serve'",
+    "build": "sass ./src/scss:./dist/css && rollup ./src/js/index.js --file ./dist/js/index.js --format iife && npx @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0-beta.3",
