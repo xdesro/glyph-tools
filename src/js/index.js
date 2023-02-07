@@ -68,19 +68,14 @@ modeButtons.forEach((button) => {
 });
 
 clipboardbutton.addEventListener('click', (e) => {
-  navigator.permissions.query({ name: 'clipboard-write' }).then((result) => {
-    if (
-      state.inputText.length > 0 &&
-      (result.state === 'granted' || result.state === 'prompt')
-    ) {
-      navigator.clipboard.writeText(output.innerText);
-      console.log(`Copied ${output.innerText} to clipboard.`);
-      clipboardbutton.classList.add('app__copy--copied');
-      setTimeout(() => {
-        clipboardbutton.classList.remove('app__copy--copied');
-      }, 1500);
-    }
-  });
+  if (state.inputText.length > 0) {
+    navigator.clipboard.writeText(output.innerText);
+    console.log(`Copied ${output.innerText} to clipboard.`);
+    clipboardbutton.classList.add('app__copy--copied');
+    setTimeout(() => {
+      clipboardbutton.classList.remove('app__copy--copied');
+    }, 1500);
+  }
 });
 
 // subscribe(console.log);
