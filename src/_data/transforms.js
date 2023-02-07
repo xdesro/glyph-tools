@@ -11,5 +11,6 @@ module.exports = [
   'Sans Serif Italic',
   'Sans Serif Bold',
   'Sans Serif Bold Italic',
+  'widetext',
   'Spongebob',
 ];

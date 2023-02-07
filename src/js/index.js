@@ -9,6 +9,7 @@ import sansSerif from '../../transforms/sansSerif';
 import sansSerifItalic from '../../transforms/sansSerifItalic';
 import sansSerifBold from '../../transforms/sansSerifBold';
 import sansSerifBoldItalic from '../../transforms/sansSerifBoldItalic';
+import widetext from '../../transforms/widetext';
 import spongebob from '../../transforms/spongebob';
 
 const details = document.querySelector('.about');
@@ -35,6 +36,7 @@ const MODES = [
   sansSerifItalic,
   sansSerifBold,
   sansSerifBoldItalic,
+  widetext,
   spongebob,
 ];
 const state = {
