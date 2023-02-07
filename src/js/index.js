@@ -1,6 +1,7 @@
 import superscript from '../../transforms/superscript';
 import subscript from '../../transforms/subscript';
 import blackletter from '../../transforms/blackletter';
+import blackletterBold from '../../transforms/blackletterBold';
 import spongebob from '../../transforms/spongebob';
 
 const details = document.querySelector('.about');
@@ -19,6 +20,7 @@ const MODES = [
   superscript,
   subscript,
   blackletter,
+  blackletterBold,
   spongebob,
 ];
 const state = {

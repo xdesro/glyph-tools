@@ -3,5 +3,6 @@ module.exports = [
   'Superscript',
   'Subscript',
   'Blackletter',
+  'Blackletter Bold',
   'Spongebob',
 ];
