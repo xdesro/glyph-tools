@@ -1,5 +1,6 @@
 import superscript from '../../transforms/superscript';
 import subscript from '../../transforms/subscript';
+import monospace from '../../transforms/monospace';
 import blackletter from '../../transforms/blackletter';
 import blackletterBold from '../../transforms/blackletterBold';
 import serifItalic from '../../transforms/serifItalic';
@@ -21,6 +22,7 @@ const MODES = [
   },
   superscript,
   subscript,
+  monospace,
   blackletter,
   blackletterBold,
   serifItalic,

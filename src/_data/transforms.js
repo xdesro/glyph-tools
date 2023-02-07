@@ -2,6 +2,7 @@ module.exports = [
   'Normal',
   'Superscript',
   'Subscript',
+  'Monospace',
   'Blackletter',
   'Blackletter Bold',
   'Serif Italic',
