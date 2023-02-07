@@ -9,5 +9,7 @@ module.exports = [
   'Serif Bold Italic',
   'Sans Serif',
   'Sans Serif Italic',
+  'Sans Serif Bold',
+  'Sans Serif Bold Italic',
   'Spongebob',
 ];
