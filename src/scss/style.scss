@@ -127,6 +127,10 @@ main {
   p {
     margin-bottom: 2em;
   }
+  em {
+    font-style: normal;
+    color: $color--accent;
+  }
 }
 
 .app {
