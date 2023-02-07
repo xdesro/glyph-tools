@@ -4,5 +4,6 @@ module.exports = [
   'Subscript',
   'Blackletter',
   'Blackletter Bold',
+  'Serif Italic',
   'Spongebob',
 ];

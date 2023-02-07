@@ -2,6 +2,7 @@ import superscript from '../../transforms/superscript';
 import subscript from '../../transforms/subscript';
 import blackletter from '../../transforms/blackletter';
 import blackletterBold from '../../transforms/blackletterBold';
+import serifItalic from '../../transforms/serifItalic';
 import spongebob from '../../transforms/spongebob';
 
 const details = document.querySelector('.about');
@@ -21,6 +22,7 @@ const MODES = [
   subscript,
   blackletter,
   blackletterBold,
+  serifItalic,
   spongebob,
 ];
 const state = {
