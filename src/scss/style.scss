@@ -43,6 +43,11 @@ main {
     height: 100%;
   }
 }
+
+a {
+  color: inherit;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
