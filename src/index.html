@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glyph.Tools | Tiny Tool For Text Transformation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <span class="header__title">Glyph.tools</span>
+        <time class="header__season" datetime="2022-02-06">✷ SS23</time>
+        <span class="header__credit">A tiny website by <a href="https://henry.codes">Henry From Online</a></span>
+    </header>
+    <main id="main">
+        <h1 class="logo"><span class="visually-hidden">Glyph <small>(dot)</small> Tools</span>
+            <div class="logo__image">
+                {% include 'logo.svg' %}
+            </div>
+        </h1>
+
+        <details class="about">
+            <summary class="about__summary">About</summary>
+            <p>Glyph.tools is a UI for set of text Unicode transformations so you can talk to your friends in meme
+                format quicker and easier.</p>
+
+            <h2 class="about__title">Disclaimers</h2>
+            <p>It’s typically inaccessible to screen-readers to use alternate Unicode text. Make sure you’re being
+                considerate of all users who will be reading your cool and funny memes.</p>
+            <p>If there is no representation for a glyph in the selected style, it will be skipped in the output.
+            </p>
+        </details>
+        <div class="app" id="app">
+            <label>
+                <span class="app__input-label">Text to transform</span>
+                <input class="app__input" type="text" name="text-to-transform" id="text-to-transform"
+                    placeholder="Type here...">
+            </label>
+            <div class="app-preview">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 153 172">
+                    <path stroke="#393939" d="M1 21.5h152M1 49.5h152M1 91.5h152m-152 47h152" />
+                    <rect width="152" height="156" x=".5" y="15.5" stroke="#393939" rx="3.5" />
+                    <path fill="#fff"
+                        d="M40.8636 138H26.0909L68.8182 21.6364h14.5454L126.091 138h-14.773L76.5455 40.0455h-.9091L40.8636 138Zm5.4546-45.4545h59.5458v12.4995H46.3182V92.5455Z" />
+                </svg> -->
+            </div>
+            <div class="app__actions app__actions--radio">
+                {% for transform in transforms %}
+                <label class="app__field-group">
+                    <input class="app__radio visually-hidden" {% if forloop.index0==0 %}checked{% endif %} type="radio"
+                        name="style" value="{{ transform }}">
+                    <span class="app__radio-label">{{ transform }}</span>
+                </label>
+                {% endfor %}
+            </div>
+            <div class="app__output app__output--inactive">
+                Text will be output here.
+            </div>
+            <button class="app__copy app__copy--inactive">
+                Copy all to clipboard
+            </button>
+        </div>
+    </main>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "concurrently 'sass --watch ./src/scss:./dist/css' 'rollup ./src/js/index.js --file ./dist/js/index.js --format iife --watch' 'npx @11ty/eleventy --serve'"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0-beta.3",
+    "concurrently": "^7.6.0",
+    "rollup": "^3.14.0",
+    "sass": "^1.58.0"
+  }
+}
