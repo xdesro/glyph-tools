@@ -3,6 +3,7 @@ import subscript from '../../transforms/subscript';
 import blackletter from '../../transforms/blackletter';
 import spongebob from '../../transforms/spongebob';
 
+const details = document.querySelector('.about');
 const textInput = document.querySelector('.app__input');
 const output = document.querySelector('.app__output');
 const modeButtons = document.querySelectorAll(
@@ -86,3 +87,14 @@ clipboardbutton.addEventListener('click', (e) => {
 subscribe(updateOutput);
 subscribe(setActiveMode);
 // setState({ inputText: 'Hello World' });
+
+if (matchMedia('(min-width: 960px)').matches) {
+  details.setAttribute('open', true);
+}
+window.addEventListener('resize', (e) => {
+  if (matchMedia('(min-width: 960px)').matches) {
+    details.setAttribute('open', true);
+  } else {
+    details.removeAttribute('open');
+  }
+});

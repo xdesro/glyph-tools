@@ -31,6 +31,18 @@ body {
   background-color: $color--background;
 }
 
+main {
+  @media (min-width: 960px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 22rem 1fr;
+    align-content: space-between;
+    height: 100%;
+  }
+}
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -50,13 +62,24 @@ body {
   justify-content: space-between;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  @media (min-width: 960px) {
+    font-size: 1rem;
+    grid-template-columns: 1fr 1fr 4fr;
+  }
 }
 .header__season {
   grid-row: 2;
+  @media (min-width: 960px) {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 .header__credit {
   grid-row-end: span 2;
   text-align: right;
+  @media (min-width: 960px) {
+    grid-row-end: span 1;
+  }
   a {
     white-space: nowrap;
     text-decoration: none;
@@ -72,6 +95,10 @@ body {
 
 .logo {
   margin-bottom: 2rem;
+  @media (min-width: 960px) {
+    padding-top: 6rem;
+    padding-inline: 1rem;
+  }
   &__image {
     width: 100%;
     max-width: 20rem;
@@ -79,10 +106,17 @@ body {
 }
 
 .about {
+  max-width: 22rem;
+  @media (min-width: 960px) {
+    padding-inline: 1rem;
+  }
   &__summary {
     margin-bottom: 1em;
     cursor: pointer;
     opacity: 0.5;
+    @media (min-width: 960px) {
+      display: none;
+    }
   }
   &__title {
     font-size: 0.75rem;
@@ -96,6 +130,18 @@ body {
 }
 
 .app {
+  @media (min-width: 960px) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    padding-top: 6rem;
+    border-left: 1px solid $color--border;
+  }
+  > label {
+    @media (min-width: 960px) {
+      display: block;
+      padding-inline: 1rem;
+    }
+  }
   &__input-label {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -118,37 +164,46 @@ body {
     }
   }
   &__actions {
+    position: relative;
     display: grid;
     overflow-x: scroll;
     grid-auto-flow: column;
-    margin-bottom: 2rem;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding-left: 1rem;
-    padding-right: 1rem;
     justify-content: start;
+    width: 100vw;
+    margin-bottom: 2rem;
+    margin-left: calc(50% - 50vw);
+    padding-right: 1rem;
+    padding-left: 1rem;
+
     gap: 1rem;
-    position: relative;
     -ms-overflow-style: none;
     scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
     }
+    @media (min-width: 960px) {
+      display: flex;
+      overflow: auto;
+      width: unset;
+      margin-left: auto;
+
+      flex-wrap: wrap;
+    }
   }
   &__radio-label {
     display: inline-block;
-    background-color: transparent;
-    border: 1px solid $color--text;
     padding: 0.75rem 1.5rem;
-    border-radius: $ui--radius;
     cursor: pointer;
+    border: 1px solid $color--text;
+    border-radius: $ui--radius;
+    background-color: transparent;
     &:hover {
       background-color: $color--background-bright;
     }
     :checked ~ & {
-      background-color: $color--accent;
-      border-color: $color--accent;
       color: $color--background;
+      border-color: $color--accent;
+      background-color: $color--accent;
     }
   }
   &__output {
@@ -165,6 +220,13 @@ body {
       margin-left: calc(50% - 50vw);
       content: '';
       background-color: $color--border;
+      @media (min-width: 960px) {
+        width: 100%;
+        margin-left: unset;
+      }
+    }
+    @media (min-width: 960px) {
+      padding-left: 1rem;
     }
     &--inactive {
       opacity: 0.5;
@@ -184,16 +246,16 @@ body {
     &:before {
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
-      background-color: $color--accent;
-      color: $color--background;
+      left: 0;
       display: grid;
       place-items: center;
       content: '✓ Copied!';
       transition: opacity 0.5s;
       opacity: 0;
+      color: $color--background;
+      background-color: $color--accent;
     }
     &:hover {
       opacity: 0.8;
@@ -204,13 +266,18 @@ body {
     &--copied {
       //   animation: fade 1s linear;
       &:before {
-        opacity: 1;
         transition: none;
+        opacity: 1;
         // animation: fadeBefore 1s linear forwards;
         // animation-delay: 1s;
       }
     }
     &--inactive {
+      //   pointer-events: none;
+      cursor: not-allowed;
+      opacity: 0.8;
+      color: $color--text-disabled;
+      border-color: $color--text-disabled;
       background-image: repeating-linear-gradient(
         45deg,
         $color--background,
@@ -218,11 +285,6 @@ body {
         $color--background-bright 1rem,
         $color--background-bright 2rem
       );
-      color: $color--text-disabled;
-      border-color: $color--text-disabled;
-      //   pointer-events: none;
-      cursor: not-allowed;
-      opacity: 0.8;
       &:hover,
       &:active {
         opacity: 0.8;
