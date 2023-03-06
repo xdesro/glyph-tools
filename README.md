@@ -1,8 +1,8 @@
-# 🔠 Glyph.Tools
+![](https://github.com/xdesro/glyph-tools/blob/main/src/meta/opengraph.png?raw=true)
+
+# Glyph.Tools
 
 A tiny website for generating meme text to send to your silly little friends in your silly little group chats
-
-https://glyph.tools
 
 ## Getting started for development
 
