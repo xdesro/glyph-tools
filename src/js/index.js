@@ -11,6 +11,7 @@ import sansSerifBold from '../../transforms/sansSerifBold';
 import sansSerifBoldItalic from '../../transforms/sansSerifBoldItalic';
 import widetext from '../../transforms/widetext';
 import spongebob from '../../transforms/spongebob';
+import strikethrough from '../../transforms/strikethrough';
 
 const details = document.querySelector('.about');
 const textInput = document.querySelector('.app__input');
@@ -28,6 +29,7 @@ const MODES = [
   superscript,
   subscript,
   monospace,
+  strikethrough,
   blackletter,
   blackletterBold,
   serifItalic,
