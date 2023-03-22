@@ -1,17 +1,18 @@
-import superscript from '../../transforms/superscript';
-import subscript from '../../transforms/subscript';
-import monospace from '../../transforms/monospace';
 import blackletter from '../../transforms/blackletter';
 import blackletterBold from '../../transforms/blackletterBold';
-import serifItalic from '../../transforms/serifItalic';
-import serifBoldItalic from '../../transforms/serifBoldItalic';
+import claps from '../../transforms/claps';
+import monospace from '../../transforms/monospace';
 import sansSerif from '../../transforms/sansSerif';
-import sansSerifItalic from '../../transforms/sansSerifItalic';
 import sansSerifBold from '../../transforms/sansSerifBold';
 import sansSerifBoldItalic from '../../transforms/sansSerifBoldItalic';
-import widetext from '../../transforms/widetext';
+import sansSerifItalic from '../../transforms/sansSerifItalic';
+import serifBoldItalic from '../../transforms/serifBoldItalic';
+import serifItalic from '../../transforms/serifItalic';
 import spongebob from '../../transforms/spongebob';
 import strikethrough from '../../transforms/strikethrough';
+import subscript from '../../transforms/subscript';
+import superscript from '../../transforms/superscript';
+import widetext from '../../transforms/widetext';
 
 const details = document.querySelector('.about');
 const textInput = document.querySelector('.app__input');
@@ -26,20 +27,21 @@ const MODES = [
     name: 'Normal',
     transform: (str) => str,
   },
-  superscript,
-  subscript,
-  monospace,
-  strikethrough,
   blackletter,
   blackletterBold,
-  serifItalic,
-  serifBoldItalic,
+  claps,
+  monospace,
   sansSerif,
-  sansSerifItalic,
   sansSerifBold,
   sansSerifBoldItalic,
-  widetext,
+  sansSerifItalic,
+  serifBoldItalic,
+  serifItalic,
   spongebob,
+  strikethrough,
+  subscript,
+  superscript,
+  widetext,
 ];
 const state = {
   inputText: '',

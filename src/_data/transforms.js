@@ -14,4 +14,5 @@ module.exports = [
   'Sans Serif Bold Italic',
   'widetext',
   'Spongebob',
+  '👏 Clapping',
 ];
