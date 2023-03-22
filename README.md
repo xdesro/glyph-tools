@@ -38,3 +38,5 @@ export default {
 ```
 
 2. In `src/_data/transforms.js`, add the value you used as the `exports.name` above in the order you want it to be rendered in the Glyph.Tools UI.
+
+3. In `src/js/index.js`, import the `{transform}.js` file you created and add the imported transform to the array `MODES`.
